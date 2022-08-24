@@ -31,7 +31,7 @@ function App() {
 
   const fetchData = async () => {
     const result = await fetch(
-      `https://api.copper.com/developer_api/v1/leads/search?emails=${leadEmail}`,
+      `/developer_api/v1/leads/search?emails=${leadEmail}`,
       {
         method: "POST",
         headers: {
