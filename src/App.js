@@ -1,7 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { useEffect, useState, Fragment } from "react";
-import { BeakerIcon } from "@heroicons/react/solid";
+import { useState } from "react";
 
 function App() {
   const [lead, setLead] = useState({});
@@ -47,7 +45,7 @@ function App() {
     console.log("Lead Info: ", result);
     //switch for result here
     var incoming_result = await result.json();
-    if (incoming_result.length == 0) {
+    if (incoming_result.length === 0) {
       setErrorVisible(true);
     } else {
       setLead(incoming_result[0]);
